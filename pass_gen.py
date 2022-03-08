@@ -19,7 +19,7 @@ def generatePassword(pwlength):
         password = replaceWithNumber(password)
         #2.9 string sent to covert a letter to upper case
         password = replaceWithUppercaseLetter(password)
-        
+        password = replaceWithSymbol(password)
         passwords.append(password) 
     
     return passwords
@@ -42,7 +42,7 @@ def replaceWithSymbol(pword):
     symbol=["~","`","!","@","#","$","%","^","&","*","(",'"',")","_","-","+","=","{","[","}","]","|",":",";","'","<",">",".","?","/"]
     for i in range(random.randrange(1,3)):
         replace_index = random.randrange(len(pword)//2)
-        pword = pword[0:replace_index] + random.randrange(symbol) + pword[replace_index+1:]
+        pword = pword[0:replace_index] + symbol[random.randrange(len(symbol))] + pword[replace_index+1:]
         return pword 
 #code starts here with input
 #1
