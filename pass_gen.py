@@ -17,9 +17,9 @@ def generatePassword(pwlength):
             password = password + alphabet[next_letter_index]
         #2.8 string will be sent to convert a alphabet to string
         password = replaceWithNumber(password)
-        #2.9 string sent to covert a letter to upper case
+        #2.9 string sent to convert a letter to upper case
         password = replaceWithUppercaseLetter(password)
-        password = replaceWithSymbol(password)
+        #2.10 string sent to convert a letter to symbol
         passwords.append(password) 
     
     return passwords
